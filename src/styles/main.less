@@ -1,0 +1,145 @@
+@import 'variaveis.less';
+@import 'mapas.less';
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottton8{
+    margin-bottom: 8px;
+}
+.fontSize16{
+    font-size: 16px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body{  
+    background-color:#colors[backgroundColor]; /* chama o mapas */
+    color: @corDosTextos;/* chama a variavel */
+
+
+}
+
+li{
+    list-style: none;
+}
+
+.container {
+    
+    max-width: 960px;
+    width: 100%;
+    margin: 0  auto;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    
+
+    @media @breakpointMobile{
+        max-width: 70%; 
+        
+    }
+
+    @media @breakpointTablet{
+        max-width: 80%;
+        
+    }
+    
+
+
+    
+
+}
+
+
+header {
+    padding-bottom: 24px;
+
+    .profileAvatar {
+        width: 200px;
+        display: block;
+        margin: 0 auto 24px ;
+        border-radius: 50%;
+        
+    }
+    
+}
+
+    .profile-bio{
+
+        text-align: center;
+
+        &-name {
+            font-family: "Pacifico";
+            font-size: 18px;
+            .marginBottton8();
+        }
+        &-subtitle{
+            .fontSize16();
+            .marginBottton8();
+
+        }
+        &-description{
+            .fontSize16();
+            opacity: 70%;
+
+        }
+        
+    }
+
+
+    .social-links{
+
+        display: flex;
+        justify-content: space-between;
+        max-width: 240px;
+        width: 100%;
+        margin: 0  auto;
+
+        li{
+            
+
+            img {
+                transition: all ease .4s;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+
+
+    .projects-list {
+        margin-top: 32px;
+        &-item {
+            a{
+                text-decoration: none;
+                background-color: @corDosBotoes ;
+                display: block;
+                padding: 16px 20px;
+                margin-bottom: 16px;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                border-radius: 30px;
+                border: 2px solid @corDosBotoes;
+                transition: all ease .5s;
+
+                &:hover{
+                    color: @corDosBotoes;
+                    background-color: transparent;
+
+                }
+            }
+
+        }
+    }
+
